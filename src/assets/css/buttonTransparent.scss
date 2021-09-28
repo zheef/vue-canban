@@ -1,0 +1,36 @@
+@import "button";
+
+$colorLink: #626262;
+$colorActive: #FFF;
+$backgroundHover: #C4C4C4;
+$backgroundActive: #0C7CD5;
+
+@mixin buttonTransparent($width, $icon: '') {
+  background-color: transparent;
+
+  @include button($width, $icon);
+
+  &__text {
+    vertical-align: middle;
+    font-size: 15px;
+    color: $colorLink;
+  }
+
+  &:hover {
+    background: $backgroundHover;
+  }
+
+  /* Active */
+  &.active {
+    width: 160px;
+    background: $backgroundActive;
+  }
+
+  &.active &__plus {
+    display: none;
+  }
+
+  &.active &__text {
+    color: $colorActive;
+  }
+}

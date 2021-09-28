@@ -1,0 +1,18 @@
+@mixin button($width, $icon: '', $paddingTop: 9px) {
+  padding: $paddingTop 12px;
+  width: $width;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+
+  @if $icon != '' {
+    &__icon {
+      display: inline-block;
+      background: url($icon) no-repeat top;
+      width: 14px;
+      height: 14px;
+      vertical-align: middle;
+      margin-right: 13px;
+    }
+  }
+}

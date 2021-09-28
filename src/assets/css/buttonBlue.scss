@@ -1,0 +1,8 @@
+@import "button";
+
+@mixin buttonBlue($width, $icon: '', $paddingTop: 9px) {
+  color: #FFF;
+  background-color: #0C7CD5;
+
+  @include button($width, $icon, $paddingTop);
+}
